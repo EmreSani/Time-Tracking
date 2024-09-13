@@ -16,6 +16,7 @@ async function login(username, password) {
         const data = await response.json();
         const authToken = data.token; // Backend'den gelen token verisini kullan
         localStorage.setItem('authToken', authToken); // Token'ı localStorage'a kaydet
+        localStorage.setItem('username', username); // Kullanıcı adını kaydet
 
         // Başarılı login sonrası yönlendirme
         window.location.href = 'index.html'; // Login sonrası ana sayfaya yönlendir
