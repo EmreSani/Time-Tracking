@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <title>DEV_02 Time Tracking Dashboard</title>
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<header class="header">
+  <div class="welcome-logout">
+    <span id="welcome-message">Welcome, User!</span>
+    <button id="logout-btn" type="button">Logout</button>
+  </div>
+</header>
+<body>
+  <main class="wrapper">
+    <h1>Time Tracking Dashboard</h1>
+
+    <article class="profile-card">
+      <h2>Profile</h2>
+      <div class="user-report border-radius">
+        <img id="user-img" class="user-img" src="images/image-dev02.png" alt="user_avatar" />
+        <p id="report-for">Dev02 Team</p>
+      </div>
+
+      <div class="time-selection border-bot-radius height">
+        <button class="daily-para" type="button">Daily</button>
+        <button class="weekly-para active" type="button">Weekly</button>
+        <button class="monthly-para" type="button">Monthly</button>
+      </div>
+    </article>
+
+    <article class="theme-card">
+      <h2>JAVA</h2>
+      <div class="icon-box border-top-radius">
+        <img class="logo-card" src="images/icon-java.svg" alt="" height="40px" />
+      </div>
+      <img class="icon-ellipsis card-work" src="images/icon-ellipsis.svg" alt="" />
+      <div class="data-card border-radius">
+        <p class="card-title">JAVA</p>
+        <div class="card-info">
+          <p class="para-current">32hrs</p>
+          <span class="span-previous">Last Week - 36hrs</span>
+        </div>
+      </div>
+      <div class="theme-card-info card-1 border-bot-radius hidden">
+        <ul class="theme-card-list">
+          <li>Rename</li>
+          <li>Save as PDF</li>
+          <li>Delete</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="theme-card">
+      <h2>Spring Boot</h2>
+      <div class="icon-box border-top-radius" style="background-color: var(--soft-blue)">
+        <img class="logo-card" src="images/icon-spring.svg" alt="" height="35px" />
+      </div>
+      <img class="icon-ellipsis card-play" src="images/icon-ellipsis.svg" alt="" />
+      <div class="data-card border-radius">
+        <p class="card-title">Spring Boot</p>
+        <div class="card-info">
+          <p class="para-current">10hrs</p>
+          <span class="span-previous">Last Week - 8hrs</span>
+        </div>
+      </div>
+      <div class="theme-card-info card-2 border-bot-radius hidden">
+        <ul class="theme-card-list">
+          <li>Rename</li>
+          <li>Save as PDF</li>
+          <li>Delete</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="theme-card">
+      <h2>React</h2>
+      <div class="icon-box border-top-radius" style="background-color: var(--study-red)">
+        <img class="logo-card" src="images/icon-react.svg" alt="" height="35px" />
+      </div>
+      <img class="icon-ellipsis card-study" src="images/icon-ellipsis.svg" alt="" />
+      <div class="data-card border-radius">
+        <p class="card-title">React JS</p>
+        <div class="card-info">
+          <p class="para-current">4hrs</p>
+          <span class="span-previous">Last Week - 7hrs</span>
+        </div>
+      </div>
+      <div class="theme-card-info card-3 border-bot-radius hidden">
+        <ul class="theme-card-list">
+          <li>Rename</li>
+          <li>Save as PDF</li>
+          <li>Delete</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="theme-card">
+      <h2>SQL</h2>
+      <div class="icon-box border-top-radius" style="background-color: var(--exercise-light-purple)">
+        <img class="logo-card" src="images/icon-sql.svg" alt="" height="35px" />
+      </div>
+      <img class="icon-ellipsis card-exercise" src="images/icon-ellipsis.svg" alt="" />
+      <div class="data-card border-radius">
+        <p class="card-title">SQL</p>
+        <div class="card-info">
+          <p class="para-current">8hrs</p>
+          <span class="span-previous">Last Week - 6hrs</span>
+        </div>
+      </div>
+      <div class="theme-card-info card-4 border-bot-radius hidden">
+        <ul class="theme-card-list">
+          <li>Rename</li>
+          <li>Save as PDF</li>
+          <li>Delete</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="theme-card">
+      <h2>JavaScript</h2>
+      <div class="icon-box border-top-radius" style="background-color: var(--social-light-orange)">
+        <img class="logo-card" src="images/icon-js.svg" alt="" height="35px" />
+      </div>
+      <img class="icon-ellipsis card-social" src="images/icon-ellipsis.svg" alt="" />
+      <div class="data-card border-radius">
+        <p class="card-title">JavaScript</p>
+        <div class="card-info">
+          <p class="para-current">5hrs</p>
+          <span class="span-previous">Last Week - 4hrs</span>
+        </div>
+      </div>
+      <div class="theme-card-info card-5 border-bot-radius hidden">
+        <ul class="theme-card-list">
+          <li>Rename</li>
+          <li>Save as PDF</li>
+          <li>Delete</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="theme-card">
+      <h2>DevOps</h2>
+      <div class="icon-box border-top-radius" style="background-color: var(--self-care-light-blue)">
+        <img class="logo-card" src="images/icon-spring.svg" alt="" height="35px" />
+      </div>
+      <img class="icon-ellipsis card-self-care" src="images/icon-ellipsis.svg" alt="" />
+      <div class="data-card border-radius">
+        <p class="card-title">DevOps</p>
+        <div class="card-info">
+          <p class="para-current">2hrs</p>
+          <span class="span-previous">Last Week - 1hr</span>
+        </div>
+      </div>
+      <div class="theme-card-info card-6 border-bot-radius hidden">
+        <ul class="theme-card-list">
+          <li>Rename</li>
+          <li>Save as PDF</li>
+          <li>Delete</li>
+        </ul>
+      </div>
+    </article>
+
+    <footer class="attribution">
+      <p>Challenge by <a href="https://www.frontendmentor.io/challenges/time-tracking-dashboard-IBc0pP_h" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your Name</a>.</p>
+    </footer>
+  </main>
+
+  
+  
+  <script src="script.js"></script>
+  <script src="index.js"></script>
+
+  <script src="logout-welcome.js"></script>
+</body>
+
+</html>
