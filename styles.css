@@ -20,10 +20,6 @@
   --pale-blue: hsl(236, 100%, 87%);
 }
 
-.course-card {
-  display: block; /* Kartların görünür olduğundan emin olun */
-}
-
 .header {
   display: flex;
   justify-content: flex-end;
