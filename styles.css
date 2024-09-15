@@ -162,6 +162,7 @@ button {
 
 .icon-box {
   height: 50px;
+ 
   background-color: var(--work-red);
   position: relative;
   z-index: -1;
@@ -174,6 +175,13 @@ button {
   right: 15px;
   top: -2.5px;
   margin:3px;
+}
+
+.logo-card-bootstrap {
+  position: absolute;
+  right: 15px;
+  top: -2.5px;
+  margin-top:3px;
 }
 
 .data-card {
@@ -192,7 +200,7 @@ button {
 
 .icon-ellipsis {
   position: absolute;
-  right: 28px;
+  right: 15px;
   top: 85px;
   z-index: 9999;
 }
@@ -203,10 +211,12 @@ button {
 
 .card-title {
   font-weight: 400;
+  margin-right: 10px;
 }
 
 .card-info {
   padding: 5px 0px 30px;
+
 }
 
 .card-info p {
@@ -333,11 +343,11 @@ button {
     height: 10.2em;
   }
 
-  /* .data-card:hover {
+   .data-card:hover {
     background-color: rgb(62, 68, 149);
     transition: 0.5s;
     cursor: pointer;
-  } */
+  } 
 
   .card-title {
     padding-bottom: 20px;
