@@ -164,14 +164,29 @@
           <span class="span-previous">Last Week - 1hr</span>
         </div>
       </div>
-      <div class="theme-card-info card-6 border-bot-radius hidden">
+      <div class="theme-card-info card-2 border-bot-radius hidden">
         <ul class="theme-card-list">
-          <li>Rename</li>
-          <li>Save as PDF</li>
-          <li>Delete</li>
+          <li class="add-time-entry-btn">Add Time Entry</li>
         </ul>
       </div>
     </article>
+
+    <!-- Time Entry Form -->
+    <div id="time-entry-form" class="time-entry-form hidden">
+      <h3>Add Time Entry</h3>
+      <form id="timeEntryForm">
+        <label for="courseId">Course ID:</label>
+        <input type="number" id="courseId" name="courseId" required />
+
+        <label for="startDateTime">Start Time:</label>
+        <input type="datetime-local" id="startDateTime" name="startDateTime" required />
+
+        <label for="endDateTime">End Time:</label>
+        <input type="datetime-local" id="endDateTime" name="endDateTime" required />
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
 
     <footer class="attribution">
       <p>Challenge by <a href="https://www.frontendmentor.io/challenges/time-tracking-dashboard-IBc0pP_h" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your Name</a>.</p>

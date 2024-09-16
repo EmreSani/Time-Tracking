@@ -224,6 +224,43 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+     // "Add Time Entry" seçeneğine tıklama olayı
+     document.querySelectorAll('.theme-card-list li').forEach((item) => {
+        if (item.textContent.includes('Add Time Entry')) {
+            item.addEventListener('click', () => {
+                const timeEntryForm = document.getElementById('time-entry-form');
+                timeEntryForm.classList.remove('hidden'); // Formu görünür yap
+            });
+        }
+    });
+
+    // Formun kapanması için tıklama dışı olay
+    document.addEventListener('click', (event) => {
+        const timeEntryForm = document.getElementById('time-entry-form');
+        if (!event.target.closest('#time-entry-form') && !event.target.closest('.theme-card')) {
+            timeEntryForm.classList.add('hidden'); // Formu tekrar gizle
+        }
+    });
+
+    // Add Time Entry butonları için event listener ekleyelim
+document.querySelectorAll('.add-time-entry-btn').forEach(button => {
+    button.addEventListener('click', (event) => {
+        // En yakın theme-card öğesini bul ve courseId'yi al
+        const themeCard = event.target.closest('.theme-card');
+        const courseId = themeCard.getAttribute('data-course-id');
+        
+        // Formu göster ve courseId'yi otomatik doldur
+        const timeEntryForm = document.getElementById('time-entry-form');
+        timeEntryForm.classList.remove('hidden');
+
+        const courseIdInput = document.getElementById('courseId');
+        courseIdInput.value = courseId; // Kurs ID'sini input'a otomatik olarak yerleştir
+        
+        // Sayfayı kaydırarak forma götür
+        timeEntryForm.scrollIntoView({ behavior: 'smooth' });
+    });
+});
+
     // Fetch initial data
     fetchCourses();
 });
